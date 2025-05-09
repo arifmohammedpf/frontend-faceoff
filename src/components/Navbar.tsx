@@ -7,14 +7,14 @@ export default async function Navbar() {
   const userName = user?.first_name;
 
   return (
-    <header className="bg-white shadow">
+    <header className="border-b bg-card">
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
-        <Link href="/" className="text-xl font-bold text-gray-800">
+        <Link href="/" className="text-xl font-bold text-primary hover:text-primary/90 transition-colors">
           42 Event App
         </Link>
         <div className="flex items-center space-x-4">
           {userName && (
-            <span className="text-gray-600">{`Welcome, ${userName}`}</span>
+            <span className="text-muted-foreground">{`Welcome, ${userName}`}</span>
           )}
           <Link href="/admin">
             <Button variant="default" className="cursor-pointer">
