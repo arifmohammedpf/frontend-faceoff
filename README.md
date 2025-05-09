@@ -2,8 +2,6 @@
 
 A polished, responsive web application for managing and exploring events from the 42 network. This application allows users to browse upcoming and past events, view detailed event information, and provides an admin panel for managing events.
 
-![42 Events App Screenshot](public/app-screenshot.png)
-
 ## Features
 
 - **Event Browsing**: View all events with upcoming events prioritized
