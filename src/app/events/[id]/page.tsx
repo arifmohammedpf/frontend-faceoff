@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { getAccessToken } from "@/lib/getAccessToken";
 import { format } from "date-fns";
@@ -25,8 +26,9 @@ async function fetchEventDetails(id: string) {
   return event;
 }
 
-export default async function EventDetails({ params }: { params: { id: string } }) {
-  const event = await fetchEventDetails(params.id);
+export default async function EventDetails({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const event = await fetchEventDetails(id);
 
   return (
     <div className="space-y-8">
